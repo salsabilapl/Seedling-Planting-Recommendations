@@ -5,7 +5,8 @@ nbconvert
 scikit-learn
 plotly
 Pillow
-seaborn
-dataframe-image
-streamlit_folium
-plotly
+pandas
+Flask
+pickle
+joblib
+numpy
