@@ -25,4 +25,4 @@ jobs:
       - name: execute python workflows from bash script
         env: 
           HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
-        run: chmod=+x ./scripts/run-feature-and-prediction-pipelines.sh
+        run: ./scripts/run-feature-and-prediction-pipelines.sh
