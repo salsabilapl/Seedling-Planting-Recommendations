@@ -1,4 +1,4 @@
-name: agriculture-feature-and-prediction-pipelines
+name: feature-and-prediction-pipelines
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v2.2.0
         with:
-          python-version: '3.10.11'
+          python-version: '3.11.3'
           
       - name: install python packages
         run: |
@@ -25,4 +25,5 @@ jobs:
       - name: execute python workflows from bash script
         env: 
           HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
-        run: c:\Users\dell\Documents\Data science\serverless-ml-course-main\.github\workflows\features-and-predictions.yml./scripts/run-feature-and-prediction-pipelines.sh
+        run: ./scripts/run-feature-and-prediction-pipelines.sh
+
