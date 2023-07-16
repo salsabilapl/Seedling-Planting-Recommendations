@@ -1,0 +1,28 @@
+name: ML Workflows
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11.3
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Feature Pipeline
+        run: python feature-pipeline.ipynb
+
+      - name: Run Train Pipeline
+        run: python train-pipeline.ipynb
