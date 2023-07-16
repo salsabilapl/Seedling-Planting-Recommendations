@@ -12,7 +12,7 @@ from sklearn.tree import DecisionTreeClassifier
 import numpy as np
 
 app = Flask(__name__)
-model_file = open('agriculture_model.pkl', 'rb')
+model_file = open('C:\\Users\\dell\\Documents\\Data science\\Klasifikasi-Agri\\Rekomendasi Penanaman Bibit\\agriculture_model.pkl', 'rb')
 model = joblib.load(model_file)
 
 
